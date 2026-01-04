@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Custom CSS variables for Facebook branding 
+  These variables can be used in conjunction with Tailwind's JIT mode 
+  or directly in component styling if needed.
+*/
+:root {
+  --facebook-blue: #1877f2;
+  --facebook-green: #36a420;
+  --facebook-bg-light: #f0f2f5;
+  --facebook-text-primary: #050505;
+  --facebook-text-secondary: #606770;
+  --facebook-hover: #e4e6eb;
+}
+
+body {
+    background-color: var(--facebook-bg-light);
+    color: var(--facebook-text-primary);
+}
+
+/* Utility Class for standard Facebook card/component shadow */
+.facebook-shadow {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar Styling (Modern and non-intrusive) */
+/* Targets WebKit browsers (Chrome, Safari) */
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaaaaa;
+}
+
+/* Scrollbar track for the corner area */
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Fix for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
